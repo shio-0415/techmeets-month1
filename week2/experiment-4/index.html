@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日本のおすすめの場所</title>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f5f0eb;
+      --card: #ffffff;
+      --accent: #2d6a4f;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --shadow: 0 4px 24px rgba(0,0,0,0.08);
+      --radius: 16px;
+    }
+
+    body {
+      font-family: 'Zen Kaku Gothic New', sans-serif;
+      background: var(--bg);
+      min-height: 100vh;
+      padding: 48px 24px 80px;
+      color: var(--text);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    header .label {
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    header p {
+      margin-top: 12px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+      justify-content: center;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      width: calc(33.333% - 16px);
+      min-width: 280px;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.14);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.95);
+      transition: filter 0.25s;
+    }
+
+    .card:hover img {
+      filter: brightness(1.05);
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: #e8f5ee;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .card-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .card { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="label">Travel Japan</div>
+    <h1>日本のおすすめの場所</h1>
+    <p>一度は訪れたい、美しい日本の絶景スポット</p>
+  </header>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://placehold.jp/3d6b4f/ffffff/600x400.png?text=京都" alt="京都">
+      <div class="card-body">
+        <span class="card-tag">古都</span>
+        <h2 class="card-title">京都</h2>
+        <p class="card-desc">金閣寺や嵐山など、四季折々の美しい景色が楽しめる日本を代表する古都。桜の季節は特におすすめ。</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://placehold.jp/1a5276/ffffff/600x400.png?text=沖縄" alt="沖縄">
+      <div class="card-body">
+        <span class="card-tag">離島</span>
+        <h2 class="card-title">沖縄</h2>
+        <p class="card-desc">エメラルドグリーンの海と白い砂浜が広がるリゾート。シュノーケリングやダイビングも楽しめる。</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://placehold.jp/6e2f2f/ffffff/600x400.png?text=富士山" alt="富士山">
+      <div class="card-body">
+        <span class="card-tag">自然</span>
+        <h2 class="card-title">富士山</h2>
+        <p class="card-desc">日本最高峰の霊峰。山梨・静岡どちらからも美しい眺めが楽しめ、世界遺産にも登録されている。</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://placehold.jp/5d4037/ffffff/600x400.png?text=奈良" alt="奈良">
+      <div class="card-body">
+        <span class="card-tag">古都</span>
+        <h2 class="card-title">奈良</h2>
+        <p class="card-desc">東大寺の大仏や春日大社など歴史的な名所が多く、鹿と触れ合える奈良公園が特に人気。</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://placehold.jp/1b4f72/ffffff/600x400.png?text=北海道" alt="北海道">
+      <div class="card-body">
+        <span class="card-tag">自然</span>
+        <h2 class="card-title">北海道</h2>
+        <p class="card-desc">広大な大地に広がるラベンダー畑や雪景色。新鮮な海鮮グルメも魅力のひとつ。</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://placehold.jp/4a235a/ffffff/600x400.png?text=屋久島" alt="屋久島">
+      <div class="card-body">
+        <span class="card-tag">世界遺産</span>
+        <h2 class="card-title">屋久島</h2>
+        <p class="card-desc">樹齢数千年の縄文杉が息づく神秘の島。手つかずの自然と苔むす森が訪れる人を魅了する。</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
